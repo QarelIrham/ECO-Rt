@@ -27,3 +27,15 @@ document.querySelector('form').addEventListener('submit',e=>{
   alert(`Permintaan demo untuk ${email} telah diterima! Tim Eco RT akan menghubungi Anda.`);
   e.target.reset();
 });
+
+// Toggle Menu di Mobile
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  const icon = menuToggle.querySelector("i");
+  icon.classList.toggle("fa-bars");
+  icon.classList.toggle("fa-times");
+});
+
