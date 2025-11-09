@@ -1,0 +1,215 @@
+
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{scroll-behavior:smooth;font-family:'Poppins',sans-serif;line-height:1.7;transition:background .6s,color .6s}
+body{background:#f3fff5;color:#1f2b1f}
+
+/* DARK MODE */
+.dark-mode{background:#121714;color:#e3e8e2}
+.dark-mode header{background:rgba(25,28,24,0.85)}
+.dark-mode .logo{color:#7ee787}
+.dark-mode nav a{color:#ccc}
+.dark-mode nav a:hover{color:#7ee787}
+.dark-mode .section-title{color:#86efac}
+
+/* HEADER */
+header{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);
+box-shadow:0 2px 15px rgba(0,0,0,0.08);z-index:999;transition:.3s}
+header.scrolled{box-shadow:0 4px 20px rgba(0,0,0,0.15)}
+nav{max-width:1250px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:15px 25px}
+.logo{font-weight:800;font-size:1.7em;color:#1a7f37}
+nav a{text-decoration:none;color:#2a2a2a;margin-left:25px;font-weight:600;transition:.3s}
+nav a:hover{color:#1a7f37}
+.cta-nav{background:linear-gradient(90deg,#1a7f37,#4ade80);padding:10px 25px;border-radius:30px;color:#fff!important;font-weight:700;
+box-shadow:0 3px 10px rgba(26,127,55,0.3)}
+.toggle-dark{cursor:pointer;border:none;background:none;font-size:22px;color:#1a7f37;transition:.3s}
+.dark-mode .toggle-dark{color:#7ee787}
+
+/* HERO */
+.hero{position:relative;height:100vh;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero video{position:absolute;width:100%;height:100%;object-fit:cover;filter:brightness(55%) saturate(1.2);transition:filter .5s}
+.dark-mode .hero video{filter:brightness(50%) saturate(1.0)}
+.hero::after{content:"";position:absolute;width:100%;height:100%;
+background:linear-gradient(180deg,rgba(20,100,40,0.4),rgba(0,0,0,0.7))}
+.hero-content{position:relative;z-index:2;max-width:900px;padding:0 20px;animation:fadeUp 1.2s ease forwards}
+.hero-content h1{font-size:3.2em;font-weight:800;margin-bottom:20px}
+.hero-content .highlight{color:#86efac}
+.hero-content p{font-size:1.2em;margin-bottom:40px;color:#f0fdf4}
+.hero-cta{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+.btn-main{background:linear-gradient(90deg,#22c55e,#16a34a);border:none;padding:15px 40px;border-radius:40px;font-weight:700;color:#fff;cursor:pointer;transition:.3s}
+.btn-main:hover{transform:scale(1.05);box-shadow:0 8px 25px rgba(34,197,94,0.3)}
+.btn-secondary{border:2px solid #86efac;padding:13px 38px;border-radius:40px;color:#bbf7d0;font-weight:700;text-decoration:none;transition:.3s}
+.btn-secondary:hover{background:#22c55e;color:#fff}
+.hero-stats{display:flex;justify-content:center;gap:50px;margin-top:50px;flex-wrap:wrap}
+.hero-stats div span{display:block;font-size:2.5em;font-weight:800;color:#facc15}
+.hero-stats div p{margin-top:5px;font-size:0.9em;color:#e0ffe5}
+
+
+/* ICON HERO ANIMASI */
+.hero-icons{
+  position:absolute;
+  top:20%;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:25px;
+  z-index:5;
+}
+.hero-icons i{
+  font-size:28px;
+  color:#86efac;
+  animation:float 3s ease-in-out infinite;
+}
+.hero-icons i:nth-child(2){animation-delay:1s;}
+.hero-icons i:nth-child(3){animation-delay:2s;}
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-15px)}
+}
+
+/* SECTION GENERAL */
+section{padding:90px 25px}
+.section-title{text-align:center;font-size:2.5em;color:#1a7f37;margin-bottom:20px;font-weight:800;position:relative}
+.section-title::after{content:"";width:80px;height:4px;background:#4ade80;position:absolute;bottom:-10px;left:50%;transform:translateX(-50%)}
+.section-subtitle{text-align:center;color:#555;font-size:1.1em;margin-bottom:40px}
+
+/* FEATURES */
+.features-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;padding:0 25px}
+.feature-card{background:#fff;padding:40px;border-radius:20px;box-shadow:0 10px 30px rgba(26,127,55,0.1);
+transition:.4s;text-align:center;opacity:0;transform:translateY(40px)}
+.feature-card.visible{opacity:1;transform:translateY(0)}
+.dark-mode .feature-card{background:#1b1f1a;box-shadow:0 10px 30px rgba(255,255,255,0.05)}
+.icon-wrap{background:#ecfdf5;color:#16a34a;width:70px;height:70px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+margin:auto auto 25px;font-size:30px;transition:.4s}
+.feature-card:hover .icon-wrap{background:#22c55e;color:#fff;transform:rotate(10deg) scale(1.1)}
+.feature-card h3{margin-bottom:10px;color:#1a7f37}
+.dark-mode .feature-card h3{color:#7ee787}
+.feature-card p{color:#555;line-height:1.6}
+.dark-mode .feature-card p{color:#ccc}
+
+/* PRICING, ABOUT, TESTIMONIALS (tetap tapi lebih rapi responsif) */
+.pricing,.about,.testimonials{padding:90px 25px;text-align:center}
+.price-cards{max-width:1000px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.price-card{background:#fff;padding:40px;border-radius:16px;box-shadow:0 8px 25px rgba(0,0,0,0.08);transition:.3s}
+.price-card:hover{transform:translateY(-10px)}
+.dark-mode .price-card{background:#1b1e1a}
+.price-card h3{color:#1a7f37;margin-bottom:10px}
+.price{font-size:2em;font-weight:700;color:#22c55e;margin-bottom:20px}
+.about-content{max-width:1100px;margin:auto;display:flex;flex-wrap:wrap;align-items:center;gap:50px}
+.about-text{flex:1;min-width:300px}
+.about-text h3{color:#1a7f37;margin-bottom:15px}
+.about-image{flex:1;text-align:center}
+.about-image img{max-width:100%;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.1)}
+.testimonial-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:30px;max-width:900px;margin:auto}
+.testimonial-card{background:#fff;border-radius:16px;padding:30px 40px;box-shadow:0 5px 20px rgba(0,0,0,0.08);max-width:400px;transition:.4s}
+.testimonial-card:hover{transform:translateY(-5px)}
+.dark-mode .testimonial-card{background:#1b1e1a}
+.testimonial-card i{font-size:25px;color:#1a7f37;margin-bottom:15px}
+.testimonial-card p{font-style:italic;margin-bottom:10px}
+.testimonial-card h4{color:#1a7f37}
+.dark-mode .testimonial-card h4{color:#86efac}
+
+/* BLOG */
+.blog-preview{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;text-align:left}
+.blog-card{background:#fff;border-radius:12px;box-shadow:0 8px 25px rgba(0,0,0,0.08);overflow:hidden;transition:.4s;opacity:0;transform:translateY(40px)}
+.blog-card.visible{opacity:1;transform:translateY(0)}
+.dark-mode .blog-card{background:#1b1f1a}
+.blog-card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  display:block;
+}
+
+.blog-card:hover img{transform:scale(1.05)}
+.dark-mode .blog-card img{filter:brightness(1.1) saturate(1.2)}
+.blog-card h4{margin:15px 20px 10px;color:#1a7f37}
+.dark-mode .blog-card h4{color:#7ee787}
+.blog-card p{margin:0 20px 20px;color:#444}
+.dark-mode .blog-card p{color:#ccc}
+
+/* FORM */
+.form-section{background:linear-gradient(180deg,#f0fff0,#e6ffed);text-align:center}
+.dark-mode .form-section{background:linear-gradient(180deg,#191d19,#111)}
+.form-card{max-width:550px;margin:auto;background:#fff;padding:40px;border-radius:16px;
+box-shadow:0 10px 40px rgba(0,0,0,0.08)}
+.dark-mode .form-card{background:#1b1e1a}
+.form-card input{width:100%;padding:14px;margin-bottom:15px;border:1px solid #ddd;border-radius:8px;font-size:1em}
+.form-card button{width:100%;background:linear-gradient(90deg,#1a7f37,#4ade80);border:none;padding:15px;border-radius:8px;color:#fff;font-weight:700;cursor:pointer;transition:.3s}
+.form-card button:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(26,127,55,0.3)}
+
+/* FOOTER */
+footer{background:#111;color:#eee;text-align:center;padding:40px 20px;font-size:0.9em}
+.dark-mode footer{background:#0f120f;color:#bbb}
+footer a{color:#4ade80;text-decoration:none;margin:0 5px;transition:.3s}
+footer a:hover{color:#fff}
+
+/* FLOATING WA */
+.whatsapp-float{position:fixed;bottom:30px;right:30px;width:60px;height:60px;background:#25d366;border-radius:50%;
+display:flex;align-items:center;justify-content:center;font-size:30px;color:#fff;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);transition:.3s;z-index:999}
+.whatsapp-float:hover{transform:scale(1.1)}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+body,header,nav a,.feature-card,.price-card,.form-card,footer{transition:background-color .6s,color .6s,box-shadow .6s}
+#toggleDark i{transition:transform .5s}
+.dark-mode #toggleDark i{transform:rotate(360deg)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+nav{flex-direction:column;gap:10px}
+nav a{margin:5px 10px;font-size:0.9em}
+.hero-content h1{font-size:2.3em}
+.hero-stats{gap:25px}
+.features-grid,.blog-preview{padding:60px 10px}
+.about-content{flex-direction:column;text-align:center}
+}
+
+/* ICON SOSIAL MEDIA FOOTER */
+footer .social-icons i{
+  font-size:22px;
+  margin:0 6px;
+  transition:.3s;
+  color:#4ade80;
+}
+footer .social-icons i:hover{color:#fff}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* dikit lebih renggang */
+}
+
+.logo img {
+  height: 80px; /* naik dari 45px → 80px biar keliatan proper */
+  width: auto;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+
+.logo span {
+  font-weight: 800;
+  font-size: 2em; /* naik dari 1.7em → 2em */
+  color: #1a7f37;
+}
+
+/* biar pas di HP gak kebesaran */
+@media (max-width: 768px) {
+  .logo img {
+    height: 60px;
+  }
+
+  .logo span {
+    font-size: 1.6em;
+  }
+}
+.logo img {
+  height: 80px;
+  width: 80px; /* samain tinggi & lebar biar bisa bulat sempurna */
+  border-radius: 50%; /* inilah kuncinya */
+  object-fit: cover; /* biar gambar gak gepeng */
+  border: 2px solid #1a7f37; /* opsional, kasih bingkai hijau biar matching */
+  padding: 4px; /* jarak dikit dari border */
+  background: #fff; /* biar keliatan clean kalau logonya transparan */
+  transition: all 0.3s ease;
+}

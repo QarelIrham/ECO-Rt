@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Eco RT - Platform Digitalisasi Administrasi dan Keuangan Komunitas</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+
+
+<body>
+<header id="navbar">
+  <nav>
+    <div class="logo"><img src="logo1.png" alt="Eco RT Logo"></div>
+    <div>
+      <a href="#hero">Beranda</a>
+      <a href="#features">Fitur</a>
+      <a href="#pricing">Harga</a>
+      <a href="#about">Tentang Kami</a>
+      <a href="#testimonials">Testimoni</a>
+      <a href="#blog">Blog</a>
+      <a href="#demo" class="cta-nav">Kontak</a>
+      <button class="toggle-dark" id="toggleDark"><i class="fas fa-moon"></i></button>
+    </div>
+  </nav>
+</header>
+
+<section id="hero" class="hero">
+  <video autoplay muted loop playsinline>
+    <source src="https://videos.pexels.com/video-files/4504149/4504149-uhd_2560_1440_30fps.mp4" type="video/mp4">
+  </video>
+  <div class="hero-icons">
+    <i class="fas fa-leaf"></i>
+    <i class="fas fa-comment-dots"></i>
+    <i class="fas fa-seedling"></i>
+  </div>
+  <div class="hero-content">
+    <h1>Kelola <span class="highlight">RT Digital</span> Lebih Mudah & Aman 🌿</h1>
+    <p>Eco RT bantu pengurus mengelola keuangan, surat, dan komunikasi warga secara efisien dalam satu dashboard.</p>
+    <div class="hero-cta">
+      <button class="btn-main" onclick="document.querySelector('#demo').scrollIntoView({behavior:'smooth'});">Minta Demo Gratis</button>
+      <a href="#features" class="btn-secondary">Lihat Fitur</a>
+    </div>
+    <div class="hero-stats">
+      <div><span>100+</span><p>RT Aktif</p></div>
+      <div><span>2500+</span><p>Warga Terhubung</p></div>
+      <div><span>98%</span><p>Tingkat Kepuasan</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <h2 class="section-title">Fitur Unggulan Eco RT</h2>
+  <p class="section-subtitle">Satu platform, banyak solusi — dari keuangan sampai komunikasi warga.</p>
+  <div class="features-grid">
+    <div class="feature-card"><div class="icon-wrap"><i class="fas fa-wallet"></i></div><h3>Keuangan Transparan</h3><p>Semua transaksi otomatis tercatat, bisa dicek warga kapan saja.</p></div>
+    <div class="feature-card"><div class="icon-wrap"><i class="fas fa-file-alt"></i></div><h3>Administrasi Digital</h3><p>Surat menyurat tinggal klik. Arsip online, aman dan cepat.</p></div>
+    <div class="feature-card"><div class="icon-wrap"><i class="fas fa-users"></i></div><h3>Komunitas Terkoneksi</h3><p>Komunikasi antar warga & pengurus jadi lebih teratur dan real-time.</p></div>
+    <div class="feature-card"><div class="icon-wrap"><i class="fas fa-chart-line"></i></div><h3>Dashboard Analitik</h3><p>Pantau laporan dan tren iuran dalam visualisasi interaktif.</p></div>
+  </div>
+</section>
+
+<section id="pricing" class="pricing">
+  <h2 class="section-title">Paket Harga Eco RT</h2>
+  <div class="price-cards">
+    <div class="price-card"><h3>Basic</h3><p class="price">Gratis</p><p>Untuk RT kecil yang baru memulai digitalisasi.</p></div>
+    <div class="price-card"><h3>Pro</h3><p class="price">Rp 99.000/bln</p><p>Fitur lengkap keuangan & administrasi digital.</p></div>
+    <div class="price-card"><h3>Enterprise</h3><p class="price">Hubungi Kami</p><p>Solusi khusus untuk RW dan Kelurahan.</p></div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <h2 class="section-title">Tentang Kami</h2>
+  <div class="about-content">
+    <div class="about-text"><h3>Eco RT: Inovasi Komunitas Modern</h3><p>Kami berkomitmen membantu ribuan pengurus RT untuk lebih efisien, transparan, dan terpercaya dalam tata kelola komunitas digital.</p></div>
+    <div class="about-image"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&auto=format&fit=crop"></div>
+  </div>
+</section>
+
+<section id="testimonials" class="testimonials">
+  <h2 class="section-title">Apa Kata Pengguna Kami?</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial-card"><i class="fas fa-quote-left"></i><p>"Keuangan jadi rapi, laporan otomatis — warga puas banget!"</p><h4>Rahmat H.</h4></div>
+    <div class="testimonial-card"><i class="fas fa-quote-left"></i><p>"Administrasi RT sekarang semudah buka HP!"</p><h4>Susi P.</h4></div>
+  </div>
+</section>
+
+<section id="blog">
+  <h2 class="section-title">Artikel & Tips Terkini</h2>
+  <div class="blog-preview">
+    <div class="blog-card">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Digitalisasi RT">
+      <h4>Digitalisasi RT: Langkah Awal Menuju Transparansi</h4>
+      <p>Panduan lengkap untuk pengurus yang ingin beralih ke sistem digital dengan mudah.</p>
+    </div>
+
+    <div class="blog-card">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Iuran Warga">
+      <h4>Cara Efektif Mengelola Iuran Warga</h4>
+      <p>Strategi praktis agar pengumpulan iuran RT berjalan lancar tanpa drama.</p>
+    </div>
+  </div>
+</section>
+
+<section id="demo" class="form-section">
+  <h2 class="section-title">Hubungi Kami & Dapatkan Demo Gratis</h2>
+  <form class="form-card">
+    <input type="text" placeholder="Nama Ketua RT" required>
+    <input type="email" placeholder="Email" required>
+    <input type="text" placeholder="Lokasi RT/RW" required>
+    <button type="submit">Kirim Permintaan Demo</button>
+  </form>
+</section>
+
+<footer>
+  <p>ECO RT © 2025 | Solusi Digitalisasi Lingkungan 🌿</p>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/qarelirham" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/qarelirham/" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+</footer>
+
+<a href="https://wa.me/6281292915136" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<script src="script.js"></script>
+</body>
+</html>
